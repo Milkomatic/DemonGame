@@ -7,10 +7,10 @@ public class Player : MonoBehaviour {
     public float Speed;
     public Inventory Inventory;
 
-    //private Rigidbody rb;
+    private Rigidbody2D rb;
     // Start is called before the first frame update
     private void Start() {
-        //rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -23,8 +23,10 @@ public class Player : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        var movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
-        transform.Translate(movement * Time.deltaTime);
+        var movement = new Vector2(moveHorizontal, moveVertical);
+        rb.position += (movement * Speed);
+        //transform.Translate(movement * Time.deltaTime);
+        //rb.AddForce (movement * Speed);
     }
     private void handleInventory() {
         if (Input.GetButtonDown("ToggleItem")) {
