@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Items
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Backgrounds
+    uniqueID: 23353731
+    locked: 0
+  - name: Props
+    uniqueID: 3396432279
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Items
+    uniqueID: 2437785763
+    locked: 0
+  - name: Characters
+    uniqueID: 1477151365
     locked: 0
