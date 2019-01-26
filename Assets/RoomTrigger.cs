@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomTrigger : MonoBehaviour
 {
     private Vector3 _position;
-    public float _transitionSpeed;
+    public float transitionSpeed;
 
     void Start()
     {
@@ -14,8 +14,8 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.tag == "Player"){
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, _position, _transitionSpeed);;
+        if(other.gameObject.name == "Player"){
+            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, _position, transitionSpeed);
         }
     }
 }
