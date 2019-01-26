@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
         float perspectiveTransform = moveVertical * -PerspectiveScale;
         var movement = new Vector2(moveHorizontal, moveVertical);
         _rb.position += (movement * Speed);
-        ScalingRoot.localScale += new Vector3(perspectiveTransform, 2 * perspectiveTransform, 0);
+        ScalingRoot.localScale += perspectiveTransform * Vector3.one;
         //transform.Translate(movement * Time.deltaTime);
         //rb.AddForce (movement * Speed);
     }
