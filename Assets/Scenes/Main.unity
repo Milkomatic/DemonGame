@@ -768,7 +768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.2
-  PerspectiveScale: 0.01
+  PerspectiveScale: 0.05
   Inventory: {fileID: 899623708}
   ScalingRoot: {fileID: 1577962511}
 --- !u!61 &385296901
@@ -1523,7 +1523,7 @@ Transform:
   m_GameObject: {fileID: 768075063}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 6, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 1}
+  m_LocalScale: {x: 19, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -2156,9 +2156,9 @@ Transform:
   m_Children:
   - {fileID: 1887983142}
   - {fileID: 1787962081}
-  - {fileID: 757077043}
   - {fileID: 860053761}
   - {fileID: 672143294}
+  - {fileID: 757077043}
   - {fileID: 1334302757}
   m_Father: {fileID: 0}
   m_RootOrder: 6

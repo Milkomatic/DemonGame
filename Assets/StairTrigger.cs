@@ -8,15 +8,10 @@ public class StairTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("yee");
-        if(!isUpstairs){
+        if(other.gameObject.name == "Player"){
+            isUpstairs = !isUpstairs;
             var player = other.gameObject.GetComponent<Player>();
-            player.ScalingRoot.localScale = Vector3.one;
+            player.isUpstairs = isUpstairs;
         }
-        if(isUpstairs){
-            var player = other.gameObject.GetComponent<Player>();
-            player.ScalingRoot.localScale = Vector3.one; //change for correct perspective
-        }
-        isUpstairs = !isUpstairs;
     }
 }
