@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour {
@@ -9,6 +10,7 @@ public class Inventory : MonoBehaviour {
     private IList<Item> _items = new List<Item>();
 
     public Image[] ItemUISlots;
+    public UnityEvent PickedUp = new UnityEvent();
 
     private void Awake() {
         for (int i = 0; i < ItemUISlots.Length; ++i)
