@@ -11,10 +11,12 @@ public class Player : MonoBehaviour {
     public Transform ScalingRoot;
     public Animator Animator;
     public bool IsUpstairs;
+    private GameObject _feet;
 
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
         _startingScale = transform.localScale;
+        _feet = this.transform.Find("perspective-scale-root").gameObject.transform.Find("collider").gameObject;
     }
     private void Update() {
         handleMove();
@@ -54,11 +56,11 @@ public class Player : MonoBehaviour {
 
         // Use or drop items
         if (Input.GetButtonDown("UseItem0"))
-            Inventory.UseOrDropItem(0, transform.position);
+            Inventory.UseOrDropItem(0, _feet.transform.position);
         if (Input.GetButtonDown("UseItem1"))
-            Inventory.UseOrDropItem(1, transform.position);
+            Inventory.UseOrDropItem(1, _feet.transform.position);
         if (Input.GetButtonDown("UseItem2"))
-            Inventory.UseOrDropItem(2, transform.position);
+            Inventory.UseOrDropItem(2, _feet.transform.position);
     }
 
 }
