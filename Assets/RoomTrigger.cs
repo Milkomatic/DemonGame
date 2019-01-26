@@ -14,7 +14,7 @@ public class RoomTrigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if(other.gameObject.name == "player"){
+        if(other.gameObject.name == "Player"){
             Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, _position, transitionSpeed);
         }
     }

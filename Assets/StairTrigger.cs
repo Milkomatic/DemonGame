@@ -8,7 +8,7 @@ public class StairTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.name == "player"){
+        if(other.gameObject.name == "Player"){
             isUpstairs = !isUpstairs;
             var player = other.gameObject.GetComponent<Player>();
             player.isUpstairs = isUpstairs;
