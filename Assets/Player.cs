@@ -42,7 +42,7 @@ public class Player : MonoBehaviour {
         _flipped = moveHorizontal < 0f;
     }
     private void handleScale() {
-        float scaleDelta = this.transform.position.y * -PerspectiveScale + .5f;
+        float scaleDelta = this.transform.position.y * -PerspectiveScale;
         if (IsUpstairs)
             scaleDelta += 0.5f;
         Vector3 newScale = _startingScale + scaleDelta * Vector3.one;
