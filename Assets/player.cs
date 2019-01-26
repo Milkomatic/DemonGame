@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
     public float Speed;
     public float PerspectiveScale;
     public Inventory Inventory;
+    public Transform ScalingRoot;
 
     private Rigidbody2D _rb;
     // Start is called before the first frame update
@@ -22,10 +23,10 @@ public class Player : MonoBehaviour {
     private void handleMove() {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-        float PerspectiveTransform = moveVertical * -PerspectiveScale;
+        float perspectiveTransform = moveVertical * -PerspectiveScale;
         var movement = new Vector2(moveHorizontal, moveVertical);
         _rb.position += (movement * Speed);
-        transform.localScale += new Vector3(PerspectiveTransform, 2*PerspectiveTransform, 0);
+        ScalingRoot.localScale += new Vector3(perspectiveTransform, 2 * perspectiveTransform, 0);
         //transform.Translate(movement * Time.deltaTime);
         //rb.AddForce (movement * Speed);
     }
