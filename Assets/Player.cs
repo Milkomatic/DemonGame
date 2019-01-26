@@ -4,12 +4,14 @@ public class Player : MonoBehaviour {
 
     private Vector3 _startingScale;
     private Rigidbody2D _rb;
+    private bool _flipped = false;
 
     public float Speed;
     public float PerspectiveScale;
     public Inventory Inventory;
     public Transform ScalingRoot;
     public Animator Animator;
+    public Transform SpriteTransform;
     public bool IsUpstairs;
     private GameObject _feet;
 
@@ -22,7 +24,6 @@ public class Player : MonoBehaviour {
         handleMove();
         handleInventory();
         handleScale();
-
     }
 
     private void handleMove() {
@@ -35,19 +36,19 @@ public class Player : MonoBehaviour {
         //_rb.AddForce (movement * Speed);
 
         // Adjust animation parameters
-        int horzParam = (moveHorizontal == 0f) ? 0 : (moveHorizontal > 0f) ? 1 : -1;
-        int vertParam = (moveVertical == 0f) ? 0 : (moveVertical > 0f) ? 1 : -1;
-        Animator.SetInteger("horizontal", horzParam);
-        Animator.SetInteger("vertical", vertParam);
+        Animator.SetBool("moving", moveHorizontal != 0f || moveVertical != 0f);
+
+        // Flip the Player when walking to the left
+        _flipped = moveHorizontal < 0f;
     }
-    private void handleScale(){
-        if(!IsUpstairs){
-            float perspectiveTransform = this.transform.position.y * -PerspectiveScale;
-            ScalingRoot.localScale = _startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);
-        }else{
-            float perspectiveTransform = this.transform.position.y * -PerspectiveScale + .5f;
-            ScalingRoot.localScale = _startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);
-        }
+    private void handleScale() {
+        float scaleDelta = this.transform.position.y * -PerspectiveScale + .5f;
+        if (IsUpstairs)
+            scaleDelta += 0.5f;
+        Vector3 newScale = _startingScale + scaleDelta * Vector3.one;
+        if (_flipped)
+            newScale.x *= -1f;
+        ScalingRoot.localScale = newScale;
     }
     private void handleInventory() {
         // Pickup nearest item
