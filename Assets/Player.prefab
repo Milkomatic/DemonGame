@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1908397611}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.049216226, y: -0.7320038, z: 0}
-  m_LocalScale: {x: 0.49963027, y: 0.5027576, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1241966637}
   m_RootOrder: 0
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 5220592592533530056}
   - component: {fileID: 5273883869402222192}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,7 +93,7 @@ Transform:
   m_GameObject: {fileID: 7296315747257231212}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.09850529, y: 1.4559776, z: 0}
-  m_LocalScale: {x: 2.00148, y: 1.98903, z: 1}
+  m_LocalScale: {x: 5, y: 10, z: 1}
   m_Children:
   - {fileID: 1908397612}
   m_Father: {fileID: 0}
@@ -207,4 +207,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 0.1
+  PerspectiveScale: 0.1
   Inventory: {fileID: 1908397614}

@@ -8,40 +8,38 @@ public class Player : MonoBehaviour {
     public float PerspectiveScale;
     public Inventory Inventory;
 
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
     // Start is called before the first frame update
     private void Start() {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     private void Update() {
         handleMove();
         handleInventory();
-
     }
     private void handleMove() {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         float PerspectiveTransform = moveVertical * -PerspectiveScale;
         var movement = new Vector2(moveHorizontal, moveVertical);
-        rb.position += (movement * Speed);
+        _rb.position += (movement * Speed);
         transform.localScale += new Vector3(PerspectiveTransform, 2*PerspectiveTransform, 0);
         //transform.Translate(movement * Time.deltaTime);
         //rb.AddForce (movement * Speed);
     }
     private void handleInventory() {
-        if (Input.GetButtonDown("ToggleItem")) {
+        // Pickup nearest item
+        if (Input.GetButtonDown("Pickup"))
+            Inventory.TryPickupItem();
 
-        }
-        if (Input.GetButtonDown("UseItem1")) {
-
-        }
-        if (Input.GetButtonDown("UseItem2")) {
-
-        }
-        if (Input.GetButtonDown("UseItem3")) {
-
-        }
+        // Use or drop items
+        if (Input.GetButtonDown("UseItem0"))
+            Inventory.UseOrDropItem(0, transform.position);
+        if (Input.GetButtonDown("UseItem1"))
+            Inventory.UseOrDropItem(1, transform.position);
+        if (Input.GetButtonDown("UseItem2"))
+            Inventory.UseOrDropItem(2, transform.position);
     }
 }
