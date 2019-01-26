@@ -1,2 +1,10 @@
+# Unity files
 Logs/
 Library/
+Temp/
+
+# Visual Studio files
+.vs/
+obj/
+*.csproj
+*.sln
