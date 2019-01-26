@@ -2,51 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
 
-    public float speed;
-    public object inv;
+    public float Speed;
+    public Inventory Inventory;
 
     //private Rigidbody rb;
     // Start is called before the first frame update
-    void Start()
-    {
-         //rb = GetComponent<Rigidbody>();
+    private void Start() {
+        //rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        HandleMove();
-        HandleInv();
-        
-    }
-    void HandleMove()
-    {
-        float moveHorizontal = Input.GetAxis ("Horizontal");
-        float moveVertical = Input.GetAxis ("Vertical");
+    private void Update() {
+        handleMove();
+        handleInventory();
 
-        Vector3 movement = new Vector3 (moveHorizontal, moveVertical, 0.0f);
+    }
+    private void handleMove() {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        var movement = new Vector3(moveHorizontal, moveVertical, 0.0f);
         transform.Translate(movement * Time.deltaTime);
     }
-    HandleInvc()
-    {
-        if(Input.GetKeyDown("E"))
-        {
-            
+    private void handleInventory() {
+        if (Input.GetButtonDown("ToggleItem")) {
+
         }
-        if(Input.GetKeyDown("1"))
-        {
-            
+        if (Input.GetButtonDown("UseItem1")) {
+
         }
-        if(Input.GetKeyDown("2"))
-        {
-            
+        if (Input.GetButtonDown("UseItem2")) {
+
         }
-        if(Input.GetKeyDown("2"))
-        {
-            
+        if (Input.GetButtonDown("UseItem3")) {
+
         }
     }
 }
