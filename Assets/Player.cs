@@ -42,10 +42,10 @@ public class Player : MonoBehaviour {
     }
     private void handleScale(){
         if(!IsUpstairs){
-            float perspectiveTransform = this.transform.position.y * -PerspectiveScale;
+            float perspectiveTransform = this.transform.position.y * PerspectiveScale;
             ScalingRoot.localScale = _startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);
         }else{
-            float perspectiveTransform = this.transform.position.y * -PerspectiveScale + .5f;
+            float perspectiveTransform = this.transform.position.y * PerspectiveScale + .5f;
             ScalingRoot.localScale = _startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);
         }
     }
