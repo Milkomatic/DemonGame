@@ -28,10 +28,15 @@ public class Player : MonoBehaviour {
         float moveVertical = Input.GetAxis("Vertical");
         var movement = new Vector2(moveHorizontal, moveVertical);
         _rb.position += (movement * Speed);
-        Animator.SetInteger("horizontal", (int)Mathf.Sign(moveHorizontal));
-        Animator.SetInteger("vertical", (int)Mathf.Sign(moveVertical));
+
         //transform.Translate(movement * Time.deltaTime);
         //_rb.AddForce (movement * Speed);
+
+        // Adjust animation parameters
+        int horzParam = (moveHorizontal == 0f) ? 0 : (moveHorizontal > 0f) ? 1 : -1;
+        int vertParam = (moveVertical == 0f) ? 0 : (moveVertical > 0f) ? 1 : -1;
+        Animator.SetInteger("horizontal", horzParam);
+        Animator.SetInteger("vertical", vertParam);
     }
     private void handleScale(){
         if(!IsUpstairs){
