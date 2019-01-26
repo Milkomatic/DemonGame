@@ -28,7 +28,7 @@ public class Player : MonoBehaviour {
         _rb.position += (movement * Speed);
         ScalingRoot.localScale += perspectiveTransform * Vector3.one;
         //transform.Translate(movement * Time.deltaTime);
-        //rb.AddForce (movement * Speed);
+        //_rb.AddForce (movement * Speed);
     }
     private void handleInventory() {
         // Pickup nearest item
