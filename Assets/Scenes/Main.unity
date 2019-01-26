@@ -1364,11 +1364,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1241966637, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.09850529
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1241966637, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.4559776
+      value: 1.08
       objectReference: {fileID: 0}
     - target: {fileID: 1241966637, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1405,6 +1405,19 @@ PrefabInstance:
     - target: {fileID: 1241966637, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241966637, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1241966637, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273883869402222192, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: PerspectiveScale
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1908397614, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
       propertyPath: ItemUISlots.Array.data[0]

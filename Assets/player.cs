@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     public float Speed;
+    public float PerspectiveScale;
     public Inventory Inventory;
 
     private Rigidbody2D rb;
@@ -22,9 +23,10 @@ public class Player : MonoBehaviour {
     private void handleMove() {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
-
+        float PerspectiveTransform = moveVertical * -PerspectiveScale;
         var movement = new Vector2(moveHorizontal, moveVertical);
         rb.position += (movement * Speed);
+        transform.localScale += new Vector3(PerspectiveTransform, 2*PerspectiveTransform, 0);
         //transform.Translate(movement * Time.deltaTime);
         //rb.AddForce (movement * Speed);
     }
