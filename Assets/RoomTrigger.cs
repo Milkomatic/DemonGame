@@ -1,21 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class RoomTrigger : MonoBehaviour
-{
+public class RoomTrigger : MonoBehaviour {
+
     private Vector3 _position;
-    public float transitionSpeed;
+    private Transform _cameraTrans;
 
-    void Start()
-    {
-        _position = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y, -1);
+    public float TransitionSpeed;
+
+    private void Start() {
+        Transform trans = gameObject.transform;
+        _position = new Vector3(trans.position.x, trans.position.y, -1);
+
+        _cameraTrans = Camera.main.transform;
     }
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if(other.gameObject.name == "Player"){
-            Camera.main.transform.position = Vector3.Lerp(Camera.main.transform.position, _position, transitionSpeed);
+    private void OnTriggerStay2D(Collider2D other) {
+        if (other.gameObject.name == "Player") {
+            _cameraTrans.position = Vector3.Lerp(_cameraTrans.position, _position, TransitionSpeed);
         }
     }
 }
