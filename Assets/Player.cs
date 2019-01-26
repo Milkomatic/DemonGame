@@ -1,48 +1,47 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
+
+    private Vector3 _startingScale;
+    private Rigidbody2D _rb;
 
     public float Speed;
     public float PerspectiveScale;
     public Inventory Inventory;
     public Transform ScalingRoot;
-    private Vector3 startingScale;
-    public bool isUpstairs;
-    private Rigidbody2D _rb;
-    // Start is called before the first frame update
+    public Animator Animator;
+    public bool IsUpstairs;
+
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
-        startingScale = transform.localScale;
+        _startingScale = transform.localScale;
     }
-
-    // Update is called once per frame
     private void Update() {
         handleMove();
         handleInventory();
         handleScale();
 
     }
+
     private void handleMove() {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
         var movement = new Vector2(moveHorizontal, moveVertical);
         _rb.position += (movement * Speed);
+        Animator.SetInteger("horizontal", (int)Mathf.Sign(moveHorizontal));
+        Animator.SetInteger("vertical", (int)Mathf.Sign(moveVertical));
         //transform.Translate(movement * Time.deltaTime);
         //_rb.AddForce (movement * Speed);
     }
-
     private void handleScale(){
-        if(!isUpstairs){
+        if(!IsUpstairs){
             float perspectiveTransform = this.transform.position.y * -PerspectiveScale;
-            ScalingRoot.localScale = startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);        
+            ScalingRoot.localScale = _startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);
         }else{
             float perspectiveTransform = this.transform.position.y * -PerspectiveScale + .5f;
-            ScalingRoot.localScale = startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);        
+            ScalingRoot.localScale = _startingScale + new Vector3(perspectiveTransform,perspectiveTransform,perspectiveTransform);
         }
     }
-
     private void handleInventory() {
         // Pickup nearest item
         if (Input.GetButtonDown("Pickup"))
@@ -56,4 +55,5 @@ public class Player : MonoBehaviour {
         if (Input.GetButtonDown("UseItem2"))
             Inventory.UseOrDropItem(2, transform.position);
     }
+
 }
