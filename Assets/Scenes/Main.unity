@@ -408,8 +408,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857181533
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c4bfe13b0f3c814e80026f91f27ecd7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Sprite: {fileID: 21300000, guid: 2241568339a97c34e96329706fa18787, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -431,7 +431,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7593c0e496ee3044ca1f3bc7edcefcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  InventorySprite: {fileID: 21300000, guid: 38e58e705c34280439743694b1ec9782, type: 3}
 --- !u!61 &246567711
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -528,8 +528,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857181533
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c4bfe13b0f3c814e80026f91f27ecd7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Sprite: {fileID: 21300000, guid: 3d484730f08094c469e051b8412fcb3a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7593c0e496ee3044ca1f3bc7edcefcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  InventorySprite: {fileID: 21300000, guid: 58b79e703816121489c3658f540287a7, type: 3}
 --- !u!61 &342898843
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1357,6 +1357,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1020470697954568375, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d7fba979ba97914791891d8434fb599,
+        type: 3}
     - target: {fileID: 347377369879850122, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
       propertyPath: m_RootOrder
@@ -1365,12 +1371,12 @@ PrefabInstance:
     - target: {fileID: 347377369879850122, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 347377369879850122, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7296315747257231212, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
@@ -1428,6 +1434,11 @@ PrefabInstance:
     - target: {fileID: 1241966637, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273883869402222192, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: PerspectiveScale
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 1908397614, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
       propertyPath: ItemUISlots.Array.data[0]
@@ -1820,8 +1831,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857181533
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c4bfe13b0f3c814e80026f91f27ecd7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Sprite: {fileID: 21300000, guid: 2241568339a97c34e96329706fa18787, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1843,7 +1854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7593c0e496ee3044ca1f3bc7edcefcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySprite: {fileID: 0}
+  InventorySprite: {fileID: 21300000, guid: 38e58e705c34280439743694b1ec9782, type: 3}
 --- !u!61 &1526128116
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2033,8 +2044,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857181533
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c4bfe13b0f3c814e80026f91f27ecd7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Sprite: {fileID: 21300000, guid: 4e6f05b74b5d1ab498f4ab368b61fb4c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2056,7 +2067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7593c0e496ee3044ca1f3bc7edcefcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  InventorySprite: {fileID: 21300000, guid: 8913a853d2cb3cb4ebdcb9659d088e01, type: 3}
 --- !u!61 &1555311389
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2153,8 +2164,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857181533
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c4bfe13b0f3c814e80026f91f27ecd7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Sprite: {fileID: 21300000, guid: 3d484730f08094c469e051b8412fcb3a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2176,7 +2187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7593c0e496ee3044ca1f3bc7edcefcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  InventorySprite: {fileID: 21300000, guid: 58b79e703816121489c3658f540287a7, type: 3}
 --- !u!61 &1623274830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2495,8 +2506,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857181533
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c4bfe13b0f3c814e80026f91f27ecd7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Sprite: {fileID: 21300000, guid: 4e6f05b74b5d1ab498f4ab368b61fb4c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2518,7 +2529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7593c0e496ee3044ca1f3bc7edcefcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  InventorySprite: {fileID: 21300000, guid: 8913a853d2cb3cb4ebdcb9659d088e01, type: 3}
 --- !u!61 &1964188131
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2615,8 +2626,8 @@ SpriteRenderer:
   m_SortingLayerID: -1857181533
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5c4bfe13b0f3c814e80026f91f27ecd7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.44705883}
+  m_Sprite: {fileID: 21300000, guid: 4e6f05b74b5d1ab498f4ab368b61fb4c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2638,7 +2649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7593c0e496ee3044ca1f3bc7edcefcc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventorySprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  InventorySprite: {fileID: 21300000, guid: 8913a853d2cb3cb4ebdcb9659d088e01, type: 3}
 --- !u!61 &2009418013
 BoxCollider2D:
   m_ObjectHideFlags: 0
