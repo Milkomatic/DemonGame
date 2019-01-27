@@ -69,7 +69,7 @@ public class Inventory : MonoBehaviour {
         img.enabled = true;
 
         item.PickupRoot.gameObject.SetActive(false);
-        item.DropRoot.gameObject.SetActive(false);
+        item.DropRoot?.gameObject.SetActive(false);
     }
     public void UseOrDropItem(int index, Vector3 position) {
         if (index < 0 || _items.Count <= index)

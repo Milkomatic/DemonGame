@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Demon : MonoBehaviour {
 
-    public float TimeLeft;
+    public float TimeLeft;      // Seconds
     public bool IsBanished;
 
     private void Update() {
