@@ -39,8 +39,9 @@ public class PuzzleSite : MonoBehaviour {
     }
     public void ItemPlaced(ItemType type) {
         for (int e = 0; e < ItemEntries.Count; ++e) {
-            if (ItemEntries[e].ItemType == type)
-                ItemEntries[e].Sprite.SetActive(true);
+            ItemEntry entry = ItemEntries[e];
+            if (entry.ItemType == type && entry.Sprite != null)
+                entry.Sprite.SetActive(true);
         }
     }
     public void Activate() => Active = true;

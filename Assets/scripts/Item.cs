@@ -5,6 +5,7 @@ public enum ItemType {
     Book,
     Chalk,
     Salt,
+    Key,
     Dagger,
     Sage,
     Matchbook,
