@@ -21970,6 +21970,10 @@ PrefabInstance:
       propertyPath: PickupAudioSource
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1908397614, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
+      propertyPath: PickupAudioSource
+      value: 
+      objectReference: {fileID: 2063076757}
     - target: {fileID: 5273883869402222192, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
       propertyPath: IsUpstairs
@@ -21979,25 +21983,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1908397614, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
-      propertyPath: PickupAudioSource
-      value: 
-      objectReference: {fileID: 2063076757}
-    - target: {fileID: 946577029793869216, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8358503387177505916, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2062984610536126691, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1808485412442025240, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
@@ -22010,10 +21995,25 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1808485412442025240, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 946577029793869216, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 946577029793869216, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358503387177505916, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8358503387177505916, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
@@ -22025,18 +22025,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2062984610536126691, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5832253620760902587, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 9b2e6ba15b78704458ecf23cf4f6066b, type: 3}
-      objectReference: {fileID: 12800000, guid: 2e43f4bc85cef094d95d5353daebc151,
-        type: 3}
-    - target: {fileID: 1808485412442025240, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
 --- !u!1 &1332771354
@@ -33325,7 +33323,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2e43f4bc85cef094d95d5353daebc151, type: 3}
-    m_FontSize: 30
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -33369,7 +33367,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 700, y: 300}
+  m_SizeDelta: {x: 500, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1567744751
 GameObject:
