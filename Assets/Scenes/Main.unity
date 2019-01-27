@@ -13021,7 +13021,7 @@ GameObject:
   - component: {fileID: 680939009}
   - component: {fileID: 680939008}
   m_Layer: 0
-  m_Name: RightHall (1)
+  m_Name: LeftHall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13035,7 +13035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 680939006}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 10, z: 0}
+  m_LocalPosition: {x: -9.07, y: 10, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2045497521}
@@ -13066,12 +13066,13 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.032975197, y: 1.262538}
-      - {x: -1.5270414, y: 1.231369}
-      - {x: -3.1848302, y: 1.2025261}
+    - - {x: 0.073880196, y: 1.0580091}
+      - {x: -1.5270414, y: 1.0268412}
+      - {x: -3.1848297, y: 1.0798092}
       - {x: -4.4748, y: 4.7284355}
       - {x: 3.564744, y: 4.6667366}
-      - {x: 2.185029, y: 1.3270445}
+      - {x: 2.3691044, y: 1.4293089}
+      - {x: 2.2054825, y: 1.1225157}
 --- !u!60 &680939009
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -13097,11 +13098,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.2310791, y: -0.61755943}
-      - {x: -2.2913198, y: -0.6307087}
+    - - {x: -0.21062565, y: -0.49484253}
+      - {x: -2.3935843, y: -0.5488968}
       - {x: -0.9883232, y: -2.9811692}
-      - {x: 0.0640049, y: -3.0736017}
-      - {x: 1.2129469, y: -0.8925991}
+      - {x: 0.26853275, y: -3.0940547}
+      - {x: 1.3765702, y: -0.52444744}
 --- !u!1 &691524117
 GameObject:
   m_ObjectHideFlags: 0
