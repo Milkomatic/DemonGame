@@ -30987,8 +30987,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedae952167e75546b2923ae45a2978d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 5
-  IsBanished: 0
+  TimeLeft: 120
+  IsBanished: 1
   Timeout:
     m_PersistentCalls:
       m_Calls:
