@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour {
 
     private IList<Item> _nearbyItems = new List<Item>();
-    private IList<Item> _items = new List<Item>();
+    private List<Item> _items = new List<Item>();
 
     public Image[] ItemUISlots;
+    public Item LastPickedUpItem;
     public UnityEvent PickedUp = new UnityEvent();
 
     private void Awake() {
@@ -42,6 +43,7 @@ public class Inventory : MonoBehaviour {
     }
 
 
+    public IReadOnlyList<Item> Items => _items;
     public void TryPickupItem() {
         if (_nearbyItems.Count == 0)
             return;
@@ -70,6 +72,8 @@ public class Inventory : MonoBehaviour {
 
         item.PickupRoot.gameObject.SetActive(false);
         item.DropRoot?.gameObject.SetActive(false);
+
+        LastPickedUpItem = item;
     }
     public void UseOrDropItem(int index, Vector3 position) {
         if (index < 0 || _items.Count <= index)

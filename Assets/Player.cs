@@ -5,10 +5,13 @@ public class Player : MonoBehaviour {
     private Vector3 _startingScale;
     private Rigidbody2D _rb;
     private bool _flipped = false;
+    private bool _hasBook = false;
+    private bool _bookOpen = false;
 
     public float Speed;
     public float PerspectiveScale;
     public Inventory Inventory;
+    public BookHolder BookHolder;
     public Transform ScalingRoot;
     public Animator Animator;
     public Transform SpriteTransform;
@@ -21,9 +24,13 @@ public class Player : MonoBehaviour {
         _feet = this.transform.Find("perspective-scale-root").gameObject.transform.Find("collider").gameObject;
     }
     private void Update() {
-        handleMove();
-        handleInventory();
-        handleScale();
+        if (!_bookOpen) {
+            handleMove();
+            handleScale();
+            handleInventory();
+        }
+        if (_hasBook)
+            handleBook();
     }
 
     private void handleMove() {
@@ -52,16 +59,52 @@ public class Player : MonoBehaviour {
     }
     private void handleInventory() {
         // Pickup nearest item
-        if (Input.GetButtonDown("Pickup"))
+        if (Input.GetButtonDown("Pickup")) {
             Inventory.TryPickupItem();
+            if (Inventory.LastPickedUpItem.ItemType == ItemType.Book)
+                _hasBook = true;
+        }
 
         // Use or drop items
         if (Input.GetButtonDown("UseItem0"))
-            Inventory.UseOrDropItem(0, _feet.transform.position);
+            useOrDrop(0);
         if (Input.GetButtonDown("UseItem1"))
-            Inventory.UseOrDropItem(1, _feet.transform.position);
+            useOrDrop(1);
         if (Input.GetButtonDown("UseItem2"))
-            Inventory.UseOrDropItem(2, _feet.transform.position);
+            useOrDrop(2);
+
+        void useOrDrop(int index){
+            Item item = Inventory.Items[index];
+            if (item != null) {
+                if (item.ItemType == ItemType.Book)
+                    _hasBook = false;
+                Inventory.UseOrDropItem(index, _feet.transform.position);
+            }
+        }
+    }
+    private void handleBook() {
+        // Open or close the book, if toggled
+        if (Input.GetButtonDown("ToggleBook")) {
+            if (_bookOpen)
+                BookHolder.CloseBook();
+            else
+                BookHolder.OpenBook();
+            _bookOpen = !_bookOpen;
+        }
+
+        // Close the book if its open and the user pressed cancel
+        if (_bookOpen && Input.GetButtonDown("Cancel")) {
+            BookHolder.CloseBook();
+            _bookOpen = false;
+        }
+
+        // If the book is still open, turn pages
+        if (_bookOpen) {
+            if (Input.GetButtonDown("NextPage"))
+                BookHolder.TryNextPage();
+            if (Input.GetButtonDown("PreviousPage"))
+                BookHolder.TryPreviousPage();
+        }
     }
 
 }
