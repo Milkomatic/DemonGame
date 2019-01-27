@@ -26,7 +26,7 @@ public class PuzzleSite : MonoBehaviour {
             return;
 
         Item item = other.gameObject.GetComponent<Item>();
-        if (!_requiredItems.Contains(item.ItemType))
+        if (item == null || !_requiredItems.Contains(item.ItemType))
             return;
 
         _completetionLevel += 1;
