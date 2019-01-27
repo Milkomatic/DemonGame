@@ -17,9 +17,6 @@ public class Demon : MonoBehaviour {
         }
     }
 
-    public void Banish() {
-        this.gameObject.SetActive(false);
-        IsBanished = true;
-    }
+    public void Banish() => IsBanished = true;
 
 }

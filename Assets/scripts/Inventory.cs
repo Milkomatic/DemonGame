@@ -48,9 +48,25 @@ public class Inventory : MonoBehaviour {
         if (_nearbyItems.Count == 0)
             return;
 
+        // Get the closest, active/enabled Item
+        // Sometimes recently dropped items get added to the list of nearby Items but are still inactived by Puzzle sites,
+        // so this block ignores those Items
+        Item item;
+        do {
+            item = _nearbyItems[_nearbyItems.Count - 1];
+            if (item.isActiveAndEnabled)
+                break;
+            else {
+                _nearbyItems.RemoveAt(_nearbyItems.Count - 1);
+                item = null;
+            }
+        } while (_nearbyItems.Count > 0);
+        if (item == null)
+            return;
+
+
         // Place item in the first available slot
         // If no slots are available then just return
-        Item item = _nearbyItems[_nearbyItems.Count - 1];
         int index = -1;
         bool pickedUp = false;
         for (index = 0; index < _items.Count; ++index) {

@@ -70,5 +70,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9440f7f8355b07e4fa2907848fb56df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionSpeed: 0.15
-  stairsUp: 0
+  IgnoringReentries: 0
+  TransitionSpeed: 0
+  TimesEnterred: 0
+  RaiseEventAfterReentries: 1
+  ReEnterred:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null

@@ -47,10 +47,13 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Demons
+    uniqueID: 114362561
+    locked: 0
   - name: Items
     uniqueID: 2437785763
     locked: 0
-  - name: Characters
+  - name: Player
     uniqueID: 1477151365
     locked: 0
   - name: Foreground
