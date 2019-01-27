@@ -2228,7 +2228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8740812de160e74185d9fcf2b272fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsUpstairs: 0
+  IsUpstairs: 1
 --- !u!61 &458451044
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14151,7 +14151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8740812de160e74185d9fcf2b272fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsUpstairs: 0
+  IsUpstairs: 1
 --- !u!61 &768075065
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21049,6 +21049,11 @@ PrefabInstance:
       propertyPath: PickupTxt
       value: 
       objectReference: {fileID: 1980096675}
+    - target: {fileID: 5273883869402222192, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: IsUpstairs
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1808485412442025240, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
         type: 3}
       propertyPath: m_FontData.m_Font
