@@ -28,9 +28,10 @@ public class GameStateManager : MonoBehaviour {
                     EndTutorial.Invoke();
                     _tutorialFade = true;
             }
-            if(_tutorialFade)
-                TutorialText.CrossFadeAlpha(0, 1.0f, false);
-                TutorialColor.CrossFadeAlpha(0, 1.0f, false);
+            if(_tutorialFade){
+                TutorialText.CrossFadeAlpha(0, .5f, false);
+                TutorialColor.CrossFadeAlpha(0, .5f, false);
+            }
         }
     
         // If the effect is over, start the next one, or load the next Scene
