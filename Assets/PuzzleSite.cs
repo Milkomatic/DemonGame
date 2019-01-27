@@ -4,19 +4,28 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [System.Serializable]
-public class OnItemAccepted : UnityEvent<ItemType>
+public class ItemEntry
 {
+    public ItemType type;
+    public GameObject sprite;
 }
 
 public class PuzzleSite : MonoBehaviour
 {
-    public List<ItemType> requires = new List<ItemType>();
+    private List<ItemType> requires = new List<ItemType>();
+    public List<ItemEntry> itemEntry = new List<ItemEntry>();     
 
     private int completetionLevel;
     public bool active;
 
     public UnityEvent onCompleted;
-    public OnItemAccepted onItemAccepted;
+
+    private void Start(){
+         foreach (var item in itemEntry)
+         {
+          requires.Add(item.type);   
+         }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -25,11 +34,19 @@ public class PuzzleSite : MonoBehaviour
             if (requires.Contains(item.ItemType)){ 
                 completetionLevel += 1;
                 item.gameObject.SetActive(false);
-                onItemAccepted.Invoke(item.ItemType);
+                ItemPlaced(item.ItemType);
                 if(completetionLevel == requires.Count){
                     onCompleted.Invoke();
                     Deactivate();
                 }
+            }
+        }
+    }
+
+    public void ItemPlaced(ItemType type){
+        foreach(var entry in itemEntry){
+            if(entry.type == type){
+                entry.sprite.SetActive(true);
             }
         }
     }
@@ -40,10 +57,6 @@ public class PuzzleSite : MonoBehaviour
 
     public void Deactivate(){
         active = false;
-    }
-
-    public void test(ItemType item){
-        Debug.Log(item);
     }
 }
 
