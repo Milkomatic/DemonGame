@@ -435,8 +435,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd8ed3dbf21c6b468d12831f5d4203d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeTime: 5
+  FadeDuration: 5
+  FlashDuration: 0.25
   FadeImage: {fileID: 0}
+  GameOverFlashImage: {fileID: 0}
 --- !u!4 &1230492890
 Transform:
   m_ObjectHideFlags: 0
