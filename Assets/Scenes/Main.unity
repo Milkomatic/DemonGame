@@ -950,7 +950,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd8ed3dbf21c6b468d12831f5d4203d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeDuration: 5
+  FadeDuration: 3
   FlashDuration: 0.25
   FadeImage: {fileID: 1345961257}
   GameOverFlashImage: {fileID: 1305167202}
@@ -2275,7 +2275,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.056101803, y: 10.134134}
+  m_Size: {x: 0.00561018, y: 10.134134}
   m_EdgeRadius: 0
 --- !u!4 &458451045
 Transform:
@@ -13620,7 +13620,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_UsedByComposite: 1
   m_Offset: {x: 0.026847405, y: 0.034161568}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -13632,7 +13632,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.056101803, y: 10.134134}
+  m_Size: {x: 0.005, y: 10.134134}
   m_EdgeRadius: 0
 --- !u!4 &768075066
 Transform:
@@ -30987,7 +30987,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fedae952167e75546b2923ae45a2978d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeLeft: 120
+  TimeLeft: 5
   IsBanished: 0
   Timeout:
     m_PersistentCalls:
