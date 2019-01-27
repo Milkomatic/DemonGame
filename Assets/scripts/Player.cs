@@ -8,6 +8,7 @@ public class Player : MonoBehaviour {
     private bool _hasBook = false;
     private bool _bookOpen = false;
 
+    private bool _canMove;
     public float Speed;
     public float PerspectiveScale;
     public Inventory Inventory;
@@ -25,12 +26,17 @@ public class Player : MonoBehaviour {
     }
     private void Update() {
         if (!_bookOpen) {
-            handleMove();
+            if (_canMove)
+                handleMove();
             handleScale();
             handleInventory();
         }
         if (_hasBook)
             handleBook();
+    }
+
+    public void enableMove(){
+        _canMove = true;
     }
 
     private void handleMove() {
