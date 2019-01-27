@@ -15,5 +15,7 @@ public class Item : MonoBehaviour {
 
     public ItemType ItemType;
     public Sprite InventorySprite;
+    public Transform PickupRoot;
+    public Transform DropRoot;
 
 }
