@@ -2631,6 +2631,57 @@ PrefabInstance:
     - {fileID: 0}
     - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 721e116ccb662694983da0a3870833c7, type: 3}
+--- !u!1 &580355868
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 580355869}
+  - component: {fileID: 580355870}
+  m_Layer: 0
+  m_Name: demon-raiser
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &580355869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580355868}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.64, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1716798607}
+  m_Father: {fileID: 754209364}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &580355870
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580355868}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b052b4dd4f6e80d40b3200e55cb461c0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &608536230
 GameObject:
   m_ObjectHideFlags: 0
@@ -13940,14 +13991,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754209363}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.47, y: -4.01, z: -0.6353574}
+  m_LocalPosition: {x: -0.38, y: -3.9, z: -0.6353574}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1980986335}
   - {fileID: 1729736562}
   - {fileID: 835758398}
   - {fileID: 691524118}
-  - {fileID: 1716798607}
+  - {fileID: 580355869}
   m_Father: {fileID: 1405151850}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14379,8 +14430,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835758397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 2.35, z: 0}
-  m_LocalScale: {x: 32.99, y: 32.27, z: 1}
+  m_LocalPosition: {x: -0.07, y: 2.5, z: 0}
+  m_LocalScale: {x: 32.99, y: 36.83, z: 1}
   m_Children: []
   m_Father: {fileID: 754209364}
   m_RootOrder: 2
@@ -37241,7 +37292,7 @@ GameObject:
   - component: {fileID: 1716798609}
   - component: {fileID: 1716798608}
   m_Layer: 0
-  m_Name: demon1-body
+  m_Name: demon2-body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37255,12 +37306,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1716798606}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.22, y: -1.71, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1934166222}
-  m_Father: {fileID: 754209364}
-  m_RootOrder: 4
+  m_Father: {fileID: 580355869}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1716798608
 Animator:
@@ -37272,7 +37323,7 @@ Animator:
   m_GameObject: {fileID: 1716798606}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 88a2bba417c429d4688e56cc1470bdc9, type: 2}
+  m_Controller: {fileID: 9100000, guid: ed8ddf91dafc5aa4385201ebc5ed0324, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -37318,7 +37369,7 @@ SpriteRenderer:
   m_SortingLayerID: 114362561
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ee88f32ad1f8d0040bba8a939718a851, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b6d9fc6ee2732d741872d9ed5cc150b8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -37339,8 +37390,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1729736562}
   - component: {fileID: 1729736563}
+  - component: {fileID: 1729736564}
   m_Layer: 0
-  m_Name: demon1-puddle
+  m_Name: demon2-puddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -37355,7 +37407,7 @@ Transform:
   m_GameObject: {fileID: 1729736561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.115461, y: 3.115461, z: 3.115461}
   m_Children:
   - {fileID: 1464484364}
   m_Father: {fileID: 754209364}
@@ -37409,6 +37461,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1729736564
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729736561}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0a21d73822422cc4385bb791567cf11a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1744796494
 GameObject:
   m_ObjectHideFlags: 0
@@ -43202,9 +43273,9 @@ ParticleSystem:
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0.22, y: -0.08, z: 0}
+    m_Position: {x: 0.49, y: -0.08, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1.1371963, y: 3.1811805, z: 0}
+    m_Scale: {x: 3.26, y: 3.1811805, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -43402,7 +43473,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 17.81
+      scalar: 34.7
       minScalar: 10
       maxCurve:
         serializedVersion: 2
