@@ -48,7 +48,7 @@ public class Inventory : MonoBehaviour {
 
         // Place item in the first available slot
         // If no slots are available then just return
-        Item item = _nearbyItems[0];
+        Item item = _nearbyItems[_nearbyItems.Count - 1];
         int index = -1;
         bool pickedUp = false;
         for (index = 0; index < _items.Count; ++index) {
