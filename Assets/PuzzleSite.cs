@@ -1,62 +1,49 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-[System.Serializable]
-public class ItemEntry
-{
-    public ItemType type;
-    public GameObject sprite;
+[Serializable]
+public class ItemEntry {
+    public ItemType ItemType;
+    public GameObject Sprite;
 }
 
-public class PuzzleSite : MonoBehaviour
-{
-    private List<ItemType> requires = new List<ItemType>();
-    public List<ItemEntry> itemEntry = new List<ItemEntry>();     
+public class PuzzleSite : MonoBehaviour {
+    private List<ItemType> _requiredItems = new List<ItemType>();
+    private int _completetionLevel;
 
-    private int completetionLevel;
-    public bool active;
+    public List<ItemEntry> ItemEntries = new List<ItemEntry>();
+    public bool Active;
+    public UnityEvent OnCompleted;
 
-    public UnityEvent onCompleted;
-
-    private void Start(){
-         foreach (var item in itemEntry)
-         {
-          requires.Add(item.type);   
-         }
+    private void Start() {
+        for (int e = 0; e < ItemEntries.Count; ++e)
+            _requiredItems.Add(ItemEntries[e].ItemType);
     }
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (!Active)
+            return;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(active){
-            var item = other.gameObject.GetComponent<Item>();
-            if (requires.Contains(item.ItemType)){ 
-                completetionLevel += 1;
-                item.gameObject.SetActive(false);
-                ItemPlaced(item.ItemType);
-                if(completetionLevel == requires.Count){
-                    onCompleted.Invoke();
-                    Deactivate();
-                }
-            }
+        Item item = other.gameObject.GetComponent<Item>();
+        if (!_requiredItems.Contains(item.ItemType))
+            return;
+
+        _completetionLevel += 1;
+        item.gameObject.SetActive(false);
+        ItemPlaced(item.ItemType);
+        if (_completetionLevel == _requiredItems.Count) {
+            OnCompleted.Invoke();
+            Deactivate();
         }
     }
-
-    public void ItemPlaced(ItemType type){
-        foreach(var entry in itemEntry){
-            if(entry.type == type){
-                entry.sprite.SetActive(true);
-            }
+    public void ItemPlaced(ItemType type) {
+        for (int e = 0; e < ItemEntries.Count; ++e) {
+            if (ItemEntries[e].ItemType == type)
+                ItemEntries[e].Sprite.SetActive(true);
         }
     }
-
-    public void Activate(){
-        active = true;
-    }
-
-    public void Deactivate(){
-        active = false;
-    }
+    public void Activate() => Active = true;
+    public void Deactivate() => Active = false;
 }
 

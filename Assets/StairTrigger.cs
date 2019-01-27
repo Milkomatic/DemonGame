@@ -1,17 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class StairTrigger : MonoBehaviour
-{
-    public bool isUpstairs;
+public class StairTrigger : MonoBehaviour {
+    public bool IsUpstairs;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.gameObject.name == "Player"){
-            isUpstairs = !isUpstairs;
-            var player = other.gameObject.GetComponent<Player>();
-            player.IsUpstairs = isUpstairs;
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.name == "Player") {
+            IsUpstairs = !IsUpstairs;
+            Player player = other.gameObject.GetComponent<Player>();
+            player.IsUpstairs = IsUpstairs;
         }
     }
 }

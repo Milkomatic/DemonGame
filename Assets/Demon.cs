@@ -1,26 +1,20 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine;
 
-public class Demon : MonoBehaviour
-{
+public class Demon : MonoBehaviour {
 
-    public float timeLeft;
-    public bool isBanished;
+    public float TimeLeft;
+    public bool IsBanished;
 
-    void Update()
-    {
-        timeLeft -= Time.deltaTime;
-        if ( timeLeft < 0 && !isBanished )
-        {
-                 SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
-        }
+    private void Update() {
+        TimeLeft -= Time.deltaTime;
+        if (TimeLeft < 0 && !IsBanished)
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
     }
 
-    public void Banish()
-    { 
+    public void Banish() {
         this.gameObject.SetActive(false);
-        isBanished = true;
+        IsBanished = true;
     }
+
 }
