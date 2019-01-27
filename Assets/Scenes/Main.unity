@@ -2448,21 +2448,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.1663001
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.17699063
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.052353647
-      objectReference: {fileID: 0}
     - target: {fileID: 1295740226337632060, guid: 721e116ccb662694983da0a3870833c7,
         type: 3}
       propertyPath: requires.Array.size
@@ -2567,6 +2552,21 @@ PrefabInstance:
         type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1663001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.17699063
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.052353647
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -7348,16 +7348,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 18.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 10.8
-      objectReference: {fileID: 0}
     - target: {fileID: 2182641484691861633, guid: 26e0c30fd39addf4e9de43252101adf0,
         type: 3}
       propertyPath: ReEnterred.m_PersistentCalls.m_Calls.Array.size
@@ -7417,6 +7407,16 @@ PrefabInstance:
         type: 3}
       propertyPath: IgnoringReentries
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26e0c30fd39addf4e9de43252101adf0, type: 3}
@@ -12501,21 +12501,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 18.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 10.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_UsedByEffector
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2182641484691861633, guid: 26e0c30fd39addf4e9de43252101adf0,
         type: 3}
       propertyPath: ReEnterred.m_PersistentCalls.m_Calls.Array.size
@@ -12600,6 +12585,21 @@ PrefabInstance:
         type: 3}
       propertyPath: ReEnterred.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_UsedByEffector
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26e0c30fd39addf4e9de43252101adf0, type: 3}
@@ -12839,21 +12839,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: 0.18540879
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
-        type: 3}
-      propertyPath: m_Radius
-      value: 0.17416382
-      objectReference: {fileID: 0}
-    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: -0.05191455
-      objectReference: {fileID: 0}
     - target: {fileID: 1295740226337632060, guid: 721e116ccb662694983da0a3870833c7,
         type: 3}
       propertyPath: requires.Array.size
@@ -13053,6 +13038,21 @@ PrefabInstance:
         type: 3}
       propertyPath: OnCompleted.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0.18540879
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.17416382
+      objectReference: {fileID: 0}
+    - target: {fileID: 1295740226337632058, guid: 721e116ccb662694983da0a3870833c7,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: -0.05191455
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 0}
@@ -20695,21 +20695,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 18.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 10.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
-        type: 3}
-      propertyPath: m_UsedByComposite
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2182641484691861633, guid: 26e0c30fd39addf4e9de43252101adf0,
         type: 3}
       propertyPath: ReEnterred.m_PersistentCalls.m_Calls.Array.size
@@ -20789,6 +20774,21 @@ PrefabInstance:
         type: 3}
       propertyPath: ReEnterred.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 18.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 10.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2182641484691861632, guid: 26e0c30fd39addf4e9de43252101adf0,
+        type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26e0c30fd39addf4e9de43252101adf0, type: 3}
@@ -21101,6 +21101,10 @@ GameObject:
   - component: {fileID: 1414701974}
   - component: {fileID: 1414701973}
   - component: {fileID: 1414701972}
+  - component: {fileID: 1414701981}
+  - component: {fileID: 1414701979}
+  - component: {fileID: 1414701978}
+  - component: {fileID: 1414701977}
   m_Layer: 0
   m_Name: foyer-edge
   m_TagString: Untagged
@@ -21139,7 +21143,7 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: 12.801537, y: 4.1978226}
-  - {x: 12.334827, y: 5.3610744}
+  - {x: 18.2, y: 4.2}
 --- !u!68 &1414701973
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -21157,7 +21161,7 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.9046097, y: 4.298975}
-  - {x: -0.41037083, y: 5.310499}
+  - {x: -6.14, y: 4.28}
 --- !u!68 &1414701974
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -21174,7 +21178,7 @@ EdgeCollider2D:
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: -2.87708, y: 0.20230484}
+  - {x: -5.26, y: 2.16}
   - {x: -1.9276567, y: 2.174776}
 --- !u!68 &1414701975
 EdgeCollider2D:
@@ -21211,7 +21215,61 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: 13.8443, y: 2.2761917}
+  - {x: 17, y: 1.9}
+--- !u!68 &1414701977
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414701970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 13.8443, y: 2.2761917}
   - {x: 14.758405, y: 0.6012578}
+--- !u!68 &1414701978
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414701970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 12.801537, y: 4.1978226}
+  - {x: 12.334827, y: 5.3610744}
+--- !u!68 &1414701979
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414701970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -2.87708, y: 0.20230484}
+  - {x: -1.9276567, y: 2.174776}
 --- !u!68 &1414701980
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -21230,6 +21288,24 @@ EdgeCollider2D:
   m_Points:
   - {x: -3.2915545, y: 0.6442051}
   - {x: 14.76, y: 0.6442046}
+--- !u!68 &1414701981
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1414701970}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.9046097, y: 4.298975}
+  - {x: -0.41037083, y: 5.310499}
 --- !u!1 &1419322312
 GameObject:
   m_ObjectHideFlags: 0
