@@ -48,10 +48,13 @@ MonoBehaviour:
   - {fileID: 911412142494456957}
   - {fileID: 5455659686880666601}
   - {fileID: 2027497123443981058}
+  PickupTxt: {fileID: 0}
+  PickupTemplateString: Picked up {0}
+  TextFadeDuration: 2
   PickedUp:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2029826018515946149}
+      - m_Target: {fileID: 0}
         m_MethodName: SetTrigger
         m_Mode: 5
         m_Arguments:
@@ -910,7 +913,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1477151365
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 491c775fa96a17f4fa0cddf2d877d632, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1353,7 +1356,6 @@ GameObject:
   - component: {fileID: 6749754071170435823}
   - component: {fileID: 7641788600865800800}
   - component: {fileID: 1808485412442025240}
-  - component: {fileID: 2029826018515946149}
   m_Layer: 5
   m_Name: text
   m_TagString: Untagged
@@ -1422,25 +1424,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Picked up {0}
---- !u!95 &2029826018515946149
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398638362938620182}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 8b0717664cfabda40ad506bdf380376e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7439042233449934134
 GameObject:
   m_ObjectHideFlags: 0

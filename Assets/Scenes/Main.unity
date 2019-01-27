@@ -20447,6 +20447,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1908397614, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
+      propertyPath: PickedUp.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1908397614, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
+      propertyPath: PickupTxt
+      value: 
+      objectReference: {fileID: 1980096675}
+    - target: {fileID: 1808485412442025240, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 2e43f4bc85cef094d95d5353daebc151,
+        type: 3}
+    - target: {fileID: 1808485412442025240, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78208fd6a2364db4ea6f6e9a2de8fa26, type: 3}
 --- !u!1 &1332771354
@@ -46564,6 +46583,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1980096675 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1808485412442025240, guid: 78208fd6a2364db4ea6f6e9a2de8fa26,
+    type: 3}
+  m_PrefabInstance: {fileID: 1309514817}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1980986334
 GameObject:
   m_ObjectHideFlags: 0
