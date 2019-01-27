@@ -10,7 +10,7 @@ public class Inventory : MonoBehaviour {
     private List<Item> _items = new List<Item>();
 
     public Image[] ItemUISlots;
-    public Item LastPickedUpItem;
+    public Item LastPickedUpItem { get; private set; }
     public UnityEvent PickedUp = new UnityEvent();
 
     private void Awake() {
