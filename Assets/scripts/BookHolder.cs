@@ -13,6 +13,7 @@ public class BookHolder : MonoBehaviour {
     public RectTransform LeftArrow;
     public RectTransform RightArrow;
     public RectTransform[] Pages;
+    public UnityEvent PageTurned = new UnityEvent();
 
     public void OpenBook() => BookUIRoot.gameObject.SetActive(true);
     public void CloseBook() => BookUIRoot.gameObject.SetActive(false);
@@ -34,6 +35,7 @@ public class BookHolder : MonoBehaviour {
         Pages[_page].gameObject.SetActive(false);
         _page += delta;
         Pages[_page].gameObject.SetActive(true);
+        PageTurned.Invoke();
     }
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     private void adjustArrows() {

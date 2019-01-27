@@ -18,5 +18,6 @@ public class Item : MonoBehaviour {
     public Sprite InventorySprite;
     public Transform PickupRoot;
     public Transform DropRoot;
+    public AudioClip PickupClip;
 
 }

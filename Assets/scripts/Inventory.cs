@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour {
     public Image[] ItemUISlots;
     public Text PickupTxt;
     public Item LastPickedUpItem { get; private set; }
+    public AudioSource PickupAudioSource;
     public UnityEvent PickedUp = new UnityEvent();
 
     private void Awake() {
@@ -89,6 +90,9 @@ public class Inventory : MonoBehaviour {
 
         item.PickupRoot.gameObject.SetActive(false);
         item.DropRoot?.gameObject.SetActive(false);
+
+        PickupAudioSource.clip = item.PickupClip;
+        PickupAudioSource.Play();
 
         LastPickedUpItem = item;
     }
