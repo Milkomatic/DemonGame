@@ -61,8 +61,10 @@ public class Player : MonoBehaviour {
         // Pickup nearest item
         if (Input.GetButtonDown("Pickup")) {
             Inventory.TryPickupItem();
-            if (Inventory.LastPickedUpItem.ItemType == ItemType.Book)
-                _hasBook = true;
+            if (Inventory.LastPickedUpItem != null) {
+                if (Inventory.LastPickedUpItem.ItemType == ItemType.Book)
+                    _hasBook = true;
+            }
         }
 
         // Use or drop items
