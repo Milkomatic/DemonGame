@@ -7,7 +7,8 @@ public enum ItemType {
     Salt,
     Dagger,
     Sage,
-    Matchbook
+    Matchbook,
+    Crystal
 }
 
 public class Item : MonoBehaviour {
