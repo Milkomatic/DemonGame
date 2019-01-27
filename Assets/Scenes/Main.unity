@@ -2228,7 +2228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8740812de160e74185d9fcf2b272fb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IsUpstairs: 1
+  IsUpstairs: 0
 --- !u!61 &458451044
 BoxCollider2D:
   m_ObjectHideFlags: 0
