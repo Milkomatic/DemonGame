@@ -5,6 +5,7 @@ using UnityEngine.Events;
 
 public class GameStateManager : MonoBehaviour {
 
+    private bool _paused = false;
     private float _effectT = -1f;
     private float _effectDur;
     private bool _flashing = false;
@@ -15,8 +16,14 @@ public class GameStateManager : MonoBehaviour {
     public float FlashDuration = 0.25f;
     public Image FadeImage;
     public Image GameOverFlashImage;
+    public RectTransform PausedUI;
 
     private void Update() {
+        if (Input.GetButtonDown("Cancel")) {
+            _paused = !_paused;
+            SetPaused(_paused);
+        }
+
         // If the effect is over, start the next one, or load the next Scene
         if (_effectT >= _effectDur) {
             if (_startFading)
@@ -52,6 +59,10 @@ public class GameStateManager : MonoBehaviour {
         else
             play();
     }
+    public void SetPaused(bool pause) {
+        Time.timeScale = pause ? 0f : 1f;
+        PausedUI.gameObject.SetActive(pause);
+    }
     public void GameOver(bool immediately) {
         if (!immediately && FadeImage != null) {
             _effectT = 0f;
@@ -62,7 +73,6 @@ public class GameStateManager : MonoBehaviour {
         else
             gameOver();
     }
-
     public void Quit() => Application.Quit(0);
 
     private void play() => SceneManager.LoadScene("Main", LoadSceneMode.Single);
