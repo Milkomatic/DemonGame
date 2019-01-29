@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -7,8 +9,9 @@ public class Player : MonoBehaviour {
     private bool _flipped = false;
     private bool _hasBook = false;
     private bool _bookOpen = false;
-
     private bool _canMove;
+    private GameObject _feet;
+
     public float Speed;
     public float PerspectiveScale;
     public Inventory Inventory;
@@ -16,8 +19,7 @@ public class Player : MonoBehaviour {
     public Transform ScalingRoot;
     public Animator Animator;
     public Transform SpriteTransform;
-    public bool IsUpstairs;
-    private GameObject _feet;
+    public RectTransform HelpMessages;
 
     private void Start() {
         _rb = GetComponent<Rigidbody2D>();
@@ -33,11 +35,15 @@ public class Player : MonoBehaviour {
         }
         if (_hasBook)
             handleBook();
+        handleHelp();
     }
 
-    public void enableMove(){
-        _canMove = true;
+    private void handleHelp() {
+        if (Input.GetButtonDown("Help"))
+            HelpMessages.gameObject.SetActive(!HelpMessages.gameObject.activeSelf);
     }
+
+    public void EnableMove() => _canMove = true;
 
     private void handleMove() {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -55,9 +61,7 @@ public class Player : MonoBehaviour {
         _flipped = moveHorizontal < 0f;
     }
     private void handleScale() {
-        float scaleDelta = this.transform.position.y * -PerspectiveScale;
-        if (IsUpstairs)
-            scaleDelta += 0.5f;
+        float scaleDelta = this.transform.position.y * -PerspectiveScale + 0.5f;
         Vector3 newScale = _startingScale + scaleDelta * Vector3.one;
         if (_flipped)
             newScale.x *= -1f;

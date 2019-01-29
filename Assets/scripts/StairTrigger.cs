@@ -7,7 +7,6 @@ public class StairTrigger : MonoBehaviour {
         if (other.gameObject.name == "Player") {
             IsUpstairs = !IsUpstairs;
             Player player = other.gameObject.GetComponent<Player>();
-            player.IsUpstairs = IsUpstairs;
         }
     }
 }
