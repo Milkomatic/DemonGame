@@ -19,6 +19,7 @@ public class GameStateManager : MonoBehaviour {
     public RectTransform PausedUI;
 
     private void Update() {
+        // Toggle paused state based on player input
         if (Input.GetButtonDown("Cancel")) {
             _paused = !_paused;
             SetPaused(_paused);
