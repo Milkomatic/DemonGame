@@ -15,7 +15,10 @@ public class BookHolder : MonoBehaviour {
     public RectTransform[] Pages;
     public UnityEvent PageTurned = new UnityEvent();
 
-    public void OpenBook() => BookUIRoot.gameObject.SetActive(true);
+    public void OpenBook() {
+        BookUIRoot.gameObject.SetActive(true);
+        adjustArrows();
+    }
     public void CloseBook() => BookUIRoot.gameObject.SetActive(false);
     public void TryNextPage() {
         if (_page < Pages.Length - 1) {

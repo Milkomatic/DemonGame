@@ -51,9 +51,6 @@ public class Player : MonoBehaviour {
         var movement = new Vector2(moveHorizontal, moveVertical);
         _rb.position += (movement * Speed);
 
-        //transform.Translate(movement * Time.deltaTime);
-        //_rb.AddForce (movement * Speed);
-
         // Adjust animation parameters
         Animator.SetBool("moving", moveHorizontal != 0f || moveVertical != 0f);
 
